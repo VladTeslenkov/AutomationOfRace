@@ -5,16 +5,17 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RacingPractice;
 
-namespace RacingEntities.Entities
+namespace RacingEntities.Entities.MemberInfoEntities
 {
-    public class FlatEntity
-    {
-        [Column(TypeName = "id")]
-        public int Id { get; set; }
+    public class DocumentType : Entity
+    { 
 
-        [Column(TypeName = "name")]
         [Required]
         public string Name { get; set; }
+
+        [Required]
+        public string Description { get; set; }
     }
 }

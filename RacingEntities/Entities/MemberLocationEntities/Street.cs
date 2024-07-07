@@ -2,18 +2,18 @@
 using System.ComponentModel.DataAnnotations;
 using System;
 using System.Collections.Generic;
+using RacingPractice;
 
 namespace RacingEntities.Entities
 {
-    public class CityEntity
+    public class Street : Entity
     {
-        [Column(TypeName = "id")]
-        public int Id { get; set; }
-
-        [Column(TypeName = "name")]
+        
         [Required]
         public string Name { get; set; }
 
-        public ICollection<StreetEntity> Streets { get; set; }
+        public ICollection<House> Houses { get; set; }
+        public City? City { get; set; }
+
     }
 }

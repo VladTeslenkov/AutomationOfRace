@@ -5,19 +5,17 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RacingPractice;
 
 namespace RacingEntities.Entities.MemberInfoEntities
 {
-    public class DocumentEntity
+    public class Document:Entity
     {
-        [Column(TypeName = "id")]
-        public int Id { get; set; }
-
-        [Column(TypeName = "name")]
+        
         [Required]
         public string Name { get; set; }
 
-        public DocumentTypeEntity DocumentTypeEntity { get; set; }
-        public RacingMemberEntity? RacingMemberEntity { get; set; }
+        public DocumentType DocumentTypeEntity { get; set; }
+        public RacingMember? RacingMemberEntity { get; set; }
     }
 }

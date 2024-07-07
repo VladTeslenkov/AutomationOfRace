@@ -1,4 +1,5 @@
 ﻿using RacingEntities.Entities.RaceEntities;
+using RacingPractice;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -9,25 +10,22 @@ using System.Threading.Tasks;
 
 namespace RacingEntities.Entities
 {
-    public class CategoryMember
+    public class CategoryMember : Entity
     {
-        [Column(TypeName = "id")]
-        public int Id { get; set; }
-
-        [Column(TypeName = "name")]
+       
         [Required]
         public string Name { get; set; }
 
-        [Column(TypeName = "short_name")]
+       
         [Required]
         public string ShortName { get; set; }
 
-        [Column(TypeName = "description")]
+       
         
         public string Description { get; set; }
 
-        public ICollection<RaceClassEntity> raceClasses { get; set; }
-        public RacingMemberEntity? RacingMemberEntity { get; set; }
+        public ICollection<RaceClass> raceClasses { get; set; }
+        public RacingMember? RacingMemberEntity { get; set; }
 
     }
 }

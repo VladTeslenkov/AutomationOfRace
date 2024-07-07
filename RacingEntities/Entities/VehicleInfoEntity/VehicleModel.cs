@@ -5,20 +5,18 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RacingPractice;
 
 namespace RacingEntities.Entities.VehicleInfoEntity
 {
-    public class VehicleModelEntity
+    public class VehicleModel : Entity
     {
-        [Column(TypeName = "id")]
-        public int Id { get; set; }
-
-        [Column(TypeName = "name")]
+       
         [Required]
         public string Name { get; set; }
 
-        public VehicleTypeEntity VehicleType { get; set; }
+        public VehicleType VehicleType { get; set; }
 
-        public VehicleBrandEntity? Brand { get; set; }
+        public VehicleBrand? Brand { get; set; }
     }
 }

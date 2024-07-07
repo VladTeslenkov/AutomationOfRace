@@ -10,35 +10,35 @@ namespace RacingPractice
 {
     public class RacingDBContext:DbContext
     {
-        public DbSet<DocumentEntity> Documents { get; set; }
-        public DbSet<DocumentTypeEntity> DocumentsType { get; set; }
-        public DbSet<LinkEntity> Links { get; set; }
-        public DbSet<PhotoEntity> Photos { get; set; }
+        public DbSet<Document> Documents { get; set; }
+        public DbSet<DocumentType> DocumentsType { get; set; }
+        public DbSet<Link> Links { get; set; }
+        public DbSet<Photo> Photos { get; set; }
 
 
-        public DbSet<CitizenshipEntity> Citizenships { get; set; }
-        public DbSet<CityEntity> City { get; set; }
-        public DbSet<CountryEntity> Countries { get; set; }
-        public DbSet<FlatEntity> Flats { get; set; }
-        public DbSet<HouseEntity> Houses { get; set; }
-        public DbSet<StreetEntity> Streets { get; set; }
+        public DbSet<Citizenship> Citizenships { get; set; }
+        public DbSet<City> City { get; set; }
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<Flat> Flats { get; set; }
+        public DbSet<House> Houses { get; set; }
+        public DbSet<Street> Streets { get; set; }
 
 
-        public DbSet<RaceClassEntity> RaceClasses { get; set; }
-        public DbSet<RaceEntity> Races { get; set; }
-        public DbSet<TeamEntity> Teams { get; set; }
+        public DbSet<RaceClass> RaceClasses { get; set; }
+        public DbSet<Race> Races { get; set; }
+        public DbSet<Team> Teams { get; set; }
 
 
-        public DbSet<VehicleBrandEntity> VehicleBrands { get; set; }
-        public DbSet<VehicleEntity> Vehicles { get; set; }
-        public DbSet<VehicleModelEntity> VehicleModels { get; set; }
-        public DbSet<VehicleTypeEntity> VehicleTypes { get; set; }
+        public DbSet<VehicleBrand> VehicleBrands { get; set; }
+        public DbSet<Vehicle> Vehicles { get; set; }
+        public DbSet<VehicleModel> VehicleModels { get; set; }
+        public DbSet<VehicleType> VehicleTypes { get; set; }
 
 
         public DbSet<CategoryMember> CategoryMembers { get; set; }
-        public DbSet<GenderMemberEntity> GenderMembers { get; set; }
-        public DbSet<OrganizerEntity> Organizers { get; set; }
-        public DbSet<RacingMemberEntity> RacingMembers { get; set; }
+        public DbSet<GenderMember> GenderMembers { get; set; }
+        public DbSet<Organizer> Organizers { get; set; }
+        public DbSet<RacingMember> RacingMembers { get; set; }
 
         public RacingDBContext()
         {

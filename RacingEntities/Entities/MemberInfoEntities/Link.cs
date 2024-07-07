@@ -5,18 +5,20 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RacingPractice;
 
 namespace RacingEntities.Entities.MemberInfoEntities
 {
-    public class PhotoEntity
+    public class Link : Entity
     {
-        [Column(TypeName = "id")]
-        public int Id { get; set; }
-
-        [Column(TypeName = "binary_data")]
+       
         [Required]
-        public string BinaryData { get; set; }
-        public RacingMemberEntity? RacingMemberEntity { get; set; }
+        public string Link { get; set; }
+
+       
+        [Required]
+        public string Description { get; set; }
+        public RacingMember? RacingMemberEntity { get; set; }
 
     }
 }

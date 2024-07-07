@@ -6,26 +6,22 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RacingPractice;
 
 namespace RacingEntities.Entities.RaceEntities
 {
-    public class RaceClassEntity
+    public class RaceClass : Entity
     {
-        [Column(TypeName = "id")]
-        public int Id { get; set; }
-
-        [Column(TypeName = "name")]
         [Required]
         public string Name { get; set; }
 
-        [Column(TypeName = "description")]
         [Required]
         public string Description { get; set; } = string.Empty;
 
-        public ICollection<TeamEntity> Teams { get; set; }
+        public ICollection<Team> Teams { get; set; }
 
-        public ICollection<VehicleTypeEntity> VehicleTypes { get; set; }
-        public ICollection<GenderMemberEntity> GenderMember { get; set; }
+        public ICollection<VehicleType> VehicleTypes { get; set; }
+        public ICollection<GenderMember> GenderMember { get; set; }
         public ICollection<CategoryMember> CategoryMember { get; set; }
     }
 }

@@ -6,36 +6,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RacingEntities.Entities.VehicleInfoEntity;
+using RacingPractice;
 
 namespace RacingEntities.Entities.Vehicle
 {
-    public class VehicleEntity
+    public class Vehicle : Entity
     {
-        [Column(TypeName = "id")]
-        public int Id { get; set; }
+       
 
-        public VehicleBrandEntity brand { get; set; }
+        public VehicleBrand brand { get; set; }
 
-        public VehicleModelEntity model { get; set; }
+        public VehicleModel model { get; set; }
 
-        public List<RacingMemberEntity> members { get; set; }
+        public List<RacingMember> members { get; set; }
 
-        [Column(TypeName = "engine_power")]
+        
         [Required]
         public double EnginePower { get; set; }
 
-        [Column(TypeName = "engine_volume")]
+        
         [Required]
         public double EngineVolume {  get; set; }
 
-        [Column(TypeName = "production_year")]
+        
         [Required]
         public short ProductionYear {  get; set; }
 
-        [Column(TypeName = "model_name")]
+      
         [Required]
         public string ModelName {  get; set; }
-        public ICollection<RacingMemberEntity> racingMembers { get; set; }
+        public ICollection<RacingMember> racingMembers { get; set; }
 
     }
 }
