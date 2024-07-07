@@ -1,24 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RacingEntities.Entities.VehicleInfoEntity;
 using RacingPractice;
 
-namespace RacingEntities.Entities.Vehicle
+namespace RacingEntities.Entities.VehicleInfoEntity
 {
     public class Vehicle : Entity
     {
        
 
-        public VehicleBrand brand { get; set; }
+        public VehicleBrand? brand { get; set; }
+        public int? brandID { get; set; }
 
-        public VehicleModel model { get; set; }
-
-        public List<RacingMember> members { get; set; }
+        public VehicleModel? model { get; set; }
+        public int? modelID { get; set; }
 
         
         [Required]
@@ -35,7 +29,8 @@ namespace RacingEntities.Entities.Vehicle
       
         [Required]
         public string ModelName {  get; set; }
-        public ICollection<RacingMember> racingMembers { get; set; }
+
+        public ICollection<RacingMember> RacingMembers { get; set; }
 
     }
 }

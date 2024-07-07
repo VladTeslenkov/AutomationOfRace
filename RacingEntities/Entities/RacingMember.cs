@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RacingEntities.Entities.Vehicle;
+using RacingEntities.Entities.VehicleInfoEntity;
 using RacingEntities.Entities.MemberInfoEntities;
 using RacingEntities.Entities.RaceEntities;
+using RacingPractice;
 
 namespace RacingEntities.Entities
 {
-    public class RacingMember 
+    public class RacingMember : Entity
     {
       
         [Required]
@@ -49,13 +45,12 @@ namespace RacingEntities.Entities
 
         [Required]
         public House House { get; set; }
+        
 
         [Required]
         public Street Street { get; set; }
 
         public ICollection<Citizenship> Citizenship { get; set; }
-
-        public ICollection<Vehicle.Vehicle> Vehicles { get; set; }
 
         public ICollection<Photo> Photos { get; set; }
 
@@ -65,6 +60,8 @@ namespace RacingEntities.Entities
         public ICollection<Team> Teams { get; set; }
         public ICollection<GenderMember> GenderMember { get; set; }
         public ICollection<CategoryMember> CategoryMember { get; set; }
+        public ICollection<Vehicle> Vehicles { get; set; }
 
+       
     }
 }
