@@ -21,8 +21,8 @@ namespace RacingEntities.Entities
             public string ShortName { get; set; }
 
             public ICollection<RaceClass> RaceClass { get; set; }
-            public RacingMember? RacingMemberEntity { get; set; }
-
+            public RacingMember? RacingMember { get; set; }
+            public int? RacingMemberID { get; set; }
 
     }
 }

@@ -14,7 +14,7 @@ namespace RacingEntities.Entities.MemberInfoEntities
       
         [Required]
         public string BinaryData { get; set; }
-        public RacingMember? RacingMemberEntity { get; set; }
-
+        public RacingMember? RacingMember { get; set; }
+        public int? RacingMemberID { get; set; }
     }
 }

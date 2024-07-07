@@ -13,12 +13,12 @@ namespace RacingEntities.Entities.MemberInfoEntities
     {
        
         [Required]
-        public string Link { get; set; }
+        public string Links { get; set; }
 
-       
         [Required]
         public string Description { get; set; }
-        public RacingMember? RacingMemberEntity { get; set; }
+        public RacingMember? RacingMember { get; set; }
+        public int? RacingMemberID { get; set; }
 
     }
 }

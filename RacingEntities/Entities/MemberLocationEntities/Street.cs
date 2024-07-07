@@ -14,6 +14,7 @@ namespace RacingEntities.Entities
 
         public ICollection<House> Houses { get; set; }
         public City? City { get; set; }
+        public int? CityID { get; set; }
 
     }
 }

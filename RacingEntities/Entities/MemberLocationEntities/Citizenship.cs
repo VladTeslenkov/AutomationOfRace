@@ -14,7 +14,7 @@ namespace RacingEntities.Entities
         
         [Required]
         public Country Country { get; set; }
-        public RacingMember? RacingMemberEntity { get; set; }
-
+        public RacingMember? RacingMember { get; set; }
+        public int? RacingMemberID { get; set; }
     }
 }

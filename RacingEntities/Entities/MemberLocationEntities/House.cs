@@ -11,6 +11,7 @@ namespace RacingEntities.Entities
         [Required]
         public string HouseNumber { get; set; }
 
-        public Street street { get; set; }
+        public Street? street { get; set; }
+        public int? streetID { get; set; }
     }
 }

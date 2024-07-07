@@ -18,5 +18,6 @@ namespace RacingEntities.Entities.VehicleInfoEntity
         public VehicleType VehicleType { get; set; }
 
         public VehicleBrand? Brand { get; set; }
+        public int? BrandID { get; set; }
     }
 }

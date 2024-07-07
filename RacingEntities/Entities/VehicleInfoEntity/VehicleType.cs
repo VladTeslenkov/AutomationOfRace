@@ -18,6 +18,7 @@ namespace RacingEntities.Entities.VehicleInfoEntity
        
         public string Description { get; set; } = "";
         public RaceEntities.Race? Race { get; set; }
+        public int? RaceID { get; set; }
 
     }
 }

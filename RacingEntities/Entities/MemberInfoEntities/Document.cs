@@ -15,7 +15,9 @@ namespace RacingEntities.Entities.MemberInfoEntities
         [Required]
         public string Name { get; set; }
 
-        public DocumentType DocumentTypeEntity { get; set; }
-        public RacingMember? RacingMemberEntity { get; set; }
+        public DocumentType? DocumentType { get; set; }
+        public DocumentType? DocumentTypeID { get; set; }
+        public RacingMember? RacingMember { get; set; }
+        public int? RacingMemberID { get; set; }
     }
 }
